@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amkarto shopping</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Baloo|Roboto|Quintessential|Architects Daughter"
+        rel="stylesheet">
+    <!-- <script type="text/javascript">
+        window.alert("Welcome To Amkarto");
+    </script> -->
+
+</head>
+<style>
+    .header {
+        /* background-color: rgb(247, 219, 192); */
+    }
+
+    /* navbar styling */
+    .navbar {
+        margin-left: 200px;
+        background-color: antiquewhite;
+        border: black;
+        border-radius: 30px;
+        /* display: inline-block; */
+        /* padding-left: 30px; */
+        /* height: 60px; */
+        z-index: 1000;
+
+
+    }
+
+    .navbar ul {
+        overflow: auto;
+        list-style-type: none;
+
+
+    }
+
+    .navbar li {
+
+        float: left;
+        list-style: none;
+        text-decoration: none;
+        /* padding: 14px; */
+        margin: 15px 12px;
+
+
+    }
+
+    .navbar li a {
+        text-decoration: none;
+        font-weight: 200;
+        color: black;
+        padding: 5px 6px;
+        cursor: pointer;
+
+        font-size: 17px;
+
+    }
+
+    .navbar li a:hover {
+        color: rgb(101, 161, 126);
+
+    }
+
+    .sign-in {
+        overflow: auto;
+        float: right;
+
+
+    }
+
+    button {
+        border: 0;
+        /* margin: 6px; */
+
+        padding: 7px 18px;
+        font-size: 14px;
+        font-family: 'Times New Roman', Times, serif;
+        background-color: #2f6137;
+        color: white;
+        cursor: pointer;
+        border-radius: 0.7rem;
+
+
+
+    }
+
+    .sing:hover {
+        background-color: brown;
+    }
+
+    .logo_amkarto {
+        display: inline-block;
+        position: absolute;
+        top: 9px;
+        left: 30px;
+
+        border: solid white;
+        border-radius: 40px;
+    }
+
+    .search {
+        background-color: #fff;
+        border: 1px solid #d8d8d8;
+        border-radius: 8px;
+        font-size: 16px;
+        overflow: hidden;
+        left: 690px;
+        top: 26px;
+        position: absolute;
+        height: 35px;
+        width: calc(80% - 700px);
+        z-index: 2001;
+    }
+
+    .search_btn {
+        background-color: rgb(255, 255, 255);
+        border: 1px solid #d8d8d8;
+        border-radius: 7px;
+        color: #999;
+        font-size: 24px;
+        height: 35px;
+        padding: 0;
+        width: 40px;
+        position: absolute;
+        top: 27px;
+        left: 1227px;
+        /* background-image:'search.jpg'; */
+    }
+
+    .side {
+        height: 28px;
+    }
+
+
+    .navbar li.active a {
+        color: rgb(50, 121, 36);
+    }
+
+
+    /* picture of girl  */
+    .shop {
+
+        background-image: url(https://w0.peakpx.com/wallpaper/484/117/HD-wallpaper-women-asian-supermarket-girl-sunglasses.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        height: 466px;
+        width: 1506px;
+        /* margin-left: 6px; */
+        margin-top: 30px;
+        zoom: 100%;
+        align-items: stretch;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        border: honeydew solid;
+        box-sizing: border-box;
+        zoom: normal;
+        border-radius: 29px;
+
+    }
+
+    .button_app {
+        box-sizing: border-box;
+        position: absolute;
+        margin-top: 378px;
+        margin-left: 45px;
+    }
+
+    .button2app:hover {
+        background-color: antiquewhite;
+        color: black;
+    }
+
+    .button2shop:hover {
+        background-color: antiquewhite;
+        color: black;
+    }
+
+    .button2app {
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        justify-content: center;
+        border: 1px solid rgb(255, 255, 255);
+        cursor: pointer;
+        white-space: nowrap;
+        overflow: hidden;
+        outline: none;
+        height: 48px;
+        font-weight: 600;
+        font-size: 16px;
+        letter-spacing: 0.2px;
+        border-radius: 40px;
+        background-color: rgb(255, 255, 255);
+        color: rgb(2, 147, 101);
+        min-width: 330px;
+        padding: 14px 28px;
+
+    }
+
+    .button_cart {
+        box-sizing: border-box;
+        position: absolute;
+        margin-top: 378px;
+        margin-left: 455px;
+
+    }
+
+    .button2shop {
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        justify-content: center;
+        border: 1px solid rgb(255, 255, 255);
+        cursor: pointer;
+        white-space: nowrap;
+        overflow: hidden;
+        outline: none;
+        height: 48px;
+        font-weight: 600;
+        font-size: 16px;
+        letter-spacing: 0.2px;
+        border-radius: 40px;
+        background-color: rgb(255, 255, 255);
+        color: rgb(2, 147, 101);
+        min-width: 237px;
+
+
+    }
+
+    .text_bg {
+        text-align: left;
+        /* display: initial; */
+        /* overflow: hidden; */
+        line-height: 45px;
+        padding-top: 124px;
+
+    }
+
+    .text_bg span {
+        color: #ff0000;
+        padding-top: 0px;
+        padding-left: 40px;
+        font-size: 77px;
+        /* line-height: 391px; */
+        padding-bottom: 25px;
+        font-weight: bold;
+        font-family: "Quintessential";
+        display: auto;
+        overflow-x: hidden;
+        overflow-wrap: unset;
+        overflow-block: 40px;
+        overflow: hidden;
+        border: 0px;
+        margin-top: 0px auto;
+
+    }
+
+    .text_bg p {
+        padding-left: 46px;
+        font-size: 49px;
+        border: 0px;
+        /* line-height: 51px; */
+        font-weight: bold;
+        color: #141111;
+        font-family: "Architects Daughter";
+    }
+
+    .essentials {
+        box-sizing: border-box;
+        padding-bottom: 45px;
+        margin-top: 33px;
+        border-radius: 27px;
+        padding-top: 345px;
+        border: indigo;
+        background-color: #f9f9f9;
+        overflow: hidden;
+
+
+    }
+
+    .essentials h3 {
+        padding-top: 0px;
+        padding-left: 46px;
+        line-height: 0px;
+        font-weight: bold;
+        font-size: 29px;
+        border: 0px;
+        overflow-wrap: hidden;
+        margin-top: -287px;
+        margin-bottom: 3px;
+        text-align: left;
+        color: #008115;
+        font-style: normal;
+
+
+    }
+
+    .essentials li {
+        float: left;
+        list-style: none;
+        padding-top: 25px;
+        box-sizing: border-box;
+        border: auto;
+
+        border-radius: 0.7px;
+
+        margin-top: 30px;
+
+    }
+
+    .restaurant li {
+        margin: 0px;
+        margin-left: 180px;
+
+        margin-top: 30px;
+
+
+    }
+
+    .fruits li {
+        margin: 0px;
+        margin-left: 180px;
+
+        margin-top: 30px;
+    }
+
+    .tools li {
+        margin: 0px;
+        margin-left: 180px;
+        margin-top: 30px;
+    }
+
+    .body{
+        /* background-color: antiquewhite; */
+    }
+</style>
+
+<body>
+    <div class="body">
+        <header class="header">
+            <div class="logo_amkarto">
+                <img src="/pp.jpg" alt="" height="100px" width="100px">
+            </div>
+            <nav class="navbar">
+                <ul>
+
+                    <li class="active"><i class="fa fa-home"></i><a href="/index.html" target=_blank>Home</a></li>
+
+
+                    <li>
+                        <i class="fa fa-user"></i>
+                        <a href="#">About us</a>
+                    </li>
+
+                    <li>
+                        <!-- <i class="fa fa-phone"></i> -->
+                        <a href="#">Contact us</a>
+                    </li>
+
+                    <li>
+
+                        <i class="fa fa-share-alt"></i>
+                        <a href="#">Share us</a>
+                    </li>
+                    </li>
+
+                    <div>
+                        <li>
+                            <button class="search_btn">
+                                <i class="fas fa-search"></i>
+
+                            </button>
+                        </li>
+                        <li>
+                            <input type="text" name="search" id="" placeholder="       Search For Items" class="search">
+                            <!-- <button type="submit">
+                            <i class="fa fa-search"></i>
+
+                        </button> -->
+                        </li>
+                    </div>
+
+                    <div class="sign-in">
+                        <li><a href="/sign_in.html" target=_blank><button id="login" class="sing">Sign in</button>
+                            </a></li>
+                        <li>
+                            <img src="http://127.0.0.1:5500/icon/icon_b.png" alt="" class="side"><a href="#"></a>
+                        </li>
+                    </div>
+                </ul>
+            </nav>
+            <div class="shop"><a href="#"></a>
+
+                <div class="button_app">
+                    <button size="48" shape="circular" class="button2app"><i class="fa fa-download">&nbsp;
+                            &nbsp;&nbsp;Download App</i></button>
+
+
+                </div>
+                <div class="text_bg">
+                    <p>Why to Stepout?</p>>
+                    <span>Welcome to AMKARTO</span>
+                </div>
+                <div class="button_cart">
+                    <button size="48" shape="circular" class="button2shop"><i class="fa fa-shopping-cart">&nbsp; My
+                            Cart</i></button>
+
+
+                </div>
+        </header>
+        <div class="essentials">
+            <div>
+                <h3> Get your Essentials Delivered</h3>
+            </div>
+            <ul>
+                <nav>
+                    <div class="grocery">
+                        <li><a href="/shop-list.html" target="blank"><img
+                                    src="https://cdn4.vectorstock.com/i/1000x1000/70/28/healthy-food-fruits-vegetables-frame-vector-6087028.jpg"
+                                    width="210px" height="238" alt=""></a></li>
+                    </div>
+                    <div class="restaurant">
+                        <li>
+                            <a href="restaurant_list.html"><img
+                                    src="https://cdn5.vectorstock.com/i/1000x1000/54/99/fast-food-restaurant-menu-vector-21055499.jpg"
+                                    width="210px" height="238px" alt=""></a>
+                        </li>
+                    </div>
+
+                    <div class="fruits">
+                        <li>
+                            <a href="/grocery_list.html"><img
+                                    src="https://cdn3.vectorstock.com/i/1000x1000/50/17/grocery-store-front-with-window-and-door-vector-30545017.jpg"
+                                    width="210px" height="238px" alt=""></a>
+                        </li>
+                        <div class="tools">
+                            <li>
+                                <a href="/pharmacy_list.html"><img
+                                        src="https://media.istockphoto.com/vectors/pharmacy-vector-id913088320?k=20&m=913088320&s=612x612&w=0&h=47rg3FD3DnKlw-SzjIMHpGsaCOg5JfM4Pbzi-EqU7EQ="
+                                        width="210px" height="238px" alt=""></a>
+                            </li>
+                </nav>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>
